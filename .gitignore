@@ -1,5 +1,4 @@
-# Ignore thumbnails created by Windows
-Thumbs.db
+# Ignore thumbnails created by WindowsThumbs.db
 
 # Ignore Visual Studio build folders and ReSharper
 _ReSharper*/
