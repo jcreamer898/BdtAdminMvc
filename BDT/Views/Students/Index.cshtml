@@ -1,0 +1,86 @@
+﻿@model IEnumerable<BDT.Domain.Entities.Student>
+
+@{
+    ViewBag.Title = "Students";
+}
+
+<div class="row" id="students">
+    <div class="span3" id="quicklinks">
+        <h2>Quick Links</h2>
+        <div class="quicklinks-sectionTitle">Recent Classes:</div>
+        <span class="quicklinks-listname">Spring 2012</span>
+        <ul class="quicklinks-sessions">
+            <li><a>Session 1</a></li>
+            <li><a>Session 2</a></li>
+            <li><a>Session 3</a></li>
+            <li><a>Session 4</a></li>
+            <li><a>Session 5</a></li>
+            <li><a>Father Ryan</a></li>
+        </ul>
+        <span class="quicklinks-listname">Fall 2011</span>
+        <ul class="quicklinks-sessions">
+            <li><a>Session 1</a></li>
+            <li><a>Session 2</a></li>
+            <li><a>Session 3</a></li>
+            <li><a>Session 4</a></li>
+            <li><a>Session 5</a></li>
+            <li><a>Session 6</a></li>
+            <li><a>Father Ryan</a></li>
+        </ul>
+    </div>
+    <div class="span9">
+        <h1>Student Search</h1>
+        <p>Enter your search terms below and click <strong>Search</strong> to find a student...</p>
+        <form class="form-search">
+            <input type="text" class="input-large search-query" />
+            <button type="submit" class="btn">Search</button>
+        </form>
+        <hr />
+        <h3>How Search Works</h3>
+        <p>Searching in the field above allows you to search any field in the database for your search terms. The results will be ordered automatically based on more relevant fields (e.g. the name of a student vs. the name of their emergency contact). After your search, you will be able to modify the organization of your results to find information from fields that were deemed less relevant.</p>
+        <hr />
+        <h3>Sample Search Result</h3>
+        <p><a href="##sample">Click here</a> to view a sample search result.</p>
+        <hr />
+        <h1>Enter 3rd Parties</h1>
+        <p>By what criteria would you like to search?</p>
+        
+        <div id="searchSelector">
+            <a id="option1">Last Name</a> | <a id="option2">First Name</a> | <a id="option3">Session ##</a> | <a id="option4">Class (Session Date)</a>
+            <p>&nbsp;</p>
+        </div>
+	
+        <div id="div1" style="display: none;">
+            <form class="form-search">
+                <input type="text" class="input-large search-query" placeholder="Last Name"/>
+                <button type="submit" class="btn">Search</button>
+            </form>
+        </div>
+        <div id="div2" style="display: none;">
+            <form class="form-search">
+                <input type="text" class="input-large search-query" placeholder="First Name"/>
+                <button type="submit" class="btn">Search</button>
+            </form>
+        </div>
+        <div id="div3" style="display: none;">
+            <form class="form-search">
+                <input type="text" class="input-large search-query" placeholder="Session Number"/>
+                <button type="submit" class="btn">Search</button>
+            </form>
+        </div>
+        <div id="div4" style="display: none;">
+        
+            <div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+                <input class="span2" size="16" type="text" value="12-02-2012">
+                <span class="add-on"><i class="icon-th"></i></span>
+            </div>
+        </div>
+        
+        <ul>
+        @foreach(var student in Model)
+        {
+            <li>@student.FirstName @student.LastName</li>
+        }
+        </ul>
+    </div>
+</div>

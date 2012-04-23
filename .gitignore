@@ -1,0 +1,73 @@
+# Ignore thumbnails created by Windows
+Thumbs.db
+
+# Ignore Visual Studio build folders and ReSharper
+_ReSharper*/
+[Bb]in
+[Dd]ebug*/
+[Rr]elease*/
+obj/
+[Tt]est[Rr]esult*
+[Pp]ackages/
+
+# Ignore leftover merge files
+*~HEAD
+
+# Exceptions
+![Tt]ools/[Nn]u[Gg]et.exe
+#!Dominion.Cms.6.0.ReSharper.user
+
+/Dominion.Cms.Business/Dominion.Cms.Business.Tests/Dominion.Cms.Business.Tests.csproj.vs10x
+#ignore thumbnails created by windows
+Thumbs.db
+#Ignore files built by Visual Studio
+*.obj
+*.exe
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.REMOTE
+*.BASE
+*.LOCAL
+[Bb]in
+[Dd]ebug*/
+*.lib
+*.sbr
+obj/
+*.db
+[Rr]elease*/
+_ReSharper*/
+[Tt]est[Rr]esult*
+*.orig
+error_log*/
+[Tt]emp/
+*.docstates
+!NServiceBus.Host.exe
+Zimlets/*/*.zip
+CentralServerIntegration/CentralServerIntegration.Publish.xml
+sCRM.WebServices/sCRM.WebServices.Publish.xml
+
+.project
+sCRM.Presentation.Web/uploads/forms/audiBuyOrd.pdf
+#ignore build folders
+sCRM.Presentation.Web.Deploy.DhsProd/Deploy.Prod
+sCRM.Presentation.Web.Deploy.DhsQa/Debug
+sCRM.Presentation.Web.Deploy.DhsQa/Deploy.Qa
+sCRM.Presentation.Web.Deploy.DhsUat/Deploy.Uat
+sCRM.Presentation.Web.Deploy.Smoke/Deploy.Smoke
+
+/sCRM.Presentation.Web.Deploy.Smoke/Deploy.Smoke
+Zimlets/.idea/*
+
+*.chm

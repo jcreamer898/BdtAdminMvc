@@ -1,0 +1,19 @@
+﻿@model BDT.Domain.Entities.Location
+
+@Html.HiddenFor(model => model.Id)
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Seats)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Seats)
+    @Html.ValidationMessageFor(model => model.Seats)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Name)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Name)
+    @Html.ValidationMessageFor(model => model.Name)
+</div>

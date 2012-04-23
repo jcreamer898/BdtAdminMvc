@@ -1,0 +1,19 @@
+﻿@using BDT.Domain.Entities
+@model IEnumerable<BDT.Domain.Entities.SessionDate>
+
+@{
+    if (Model != null)
+    {
+        IOrderedEnumerable<SessionDate> sessionDates = Model.OrderBy(prop => prop.Date);
+        <ul id="sessionDates">
+            @foreach (SessionDate date in sessionDates)
+            {
+                <li>
+                    @date.Date.ToShortDateString()
+                    @date.Instructor.Name
+                    <a href="@Url.Action("DeleteDate", "Sessions", new {id = date.Id, sessionId = date.SessionId})">X</a>
+                </li>
+            }
+        </ul>
+    }
+}

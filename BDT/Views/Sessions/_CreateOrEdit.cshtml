@@ -1,0 +1,35 @@
+﻿@model BDT.ViewModels.SessionViewModel
+
+@Html.HiddenFor(model => model.Session.Id)
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Session.Name)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Session.Name)
+    @Html.ValidationMessageFor(model => model.Session.Name)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Session.Location)
+</div>
+<div class="editor-field">
+    @Html.DropDownListFor(model => model.Session.LocationId, Model.Locations)
+    @Html.ValidationMessageFor(model => model.Session.Location)
+</div>
+
+
+@{
+    if (Model.Session.SessionDates != null)
+    {
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Session.SessionDates)
+        </div>
+        <div class="editor-field">
+            <a class="btn btn-success" id="addSession" href="@Url.Action("Dates", "Sessions", new {id = Model.Session.Id})">
+                <i class="icon-plus icon-white"></i> Add Dates
+            </a>
+            @Html.DisplayFor(model => model.Session.SessionDates, "SessionDates")        
+        </div>
+    }
+}
