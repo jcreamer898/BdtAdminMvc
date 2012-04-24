@@ -5,29 +5,7 @@
 }
 
 <div class="row" id="students">
-    <div class="span3" id="quicklinks">
-        <h2>Quick Links</h2>
-        <div class="quicklinks-sectionTitle">Recent Classes:</div>
-        <span class="quicklinks-listname">Spring 2012</span>
-        <ul class="quicklinks-sessions">
-            <li><a>Session 1</a></li>
-            <li><a>Session 2</a></li>
-            <li><a>Session 3</a></li>
-            <li><a>Session 4</a></li>
-            <li><a>Session 5</a></li>
-            <li><a>Father Ryan</a></li>
-        </ul>
-        <span class="quicklinks-listname">Fall 2011</span>
-        <ul class="quicklinks-sessions">
-            <li><a>Session 1</a></li>
-            <li><a>Session 2</a></li>
-            <li><a>Session 3</a></li>
-            <li><a>Session 4</a></li>
-            <li><a>Session 5</a></li>
-            <li><a>Session 6</a></li>
-            <li><a>Father Ryan</a></li>
-        </ul>
-    </div>
+    @Html.Partial("_QuickLinks")
     <div class="span9">
         <h1>Student Search</h1>
         <p>Enter your search terms below and click <strong>Search</strong> to find a student...</p>

@@ -36,7 +36,7 @@ namespace BDT.Tests
             _session = new Session
             {
                 Name = "Summer Session 1",
-                LocationId = location.Id,
+                Locations = new List<Location>{location},
             };
             database.Sessions.Add(_session);
             database.SaveChanges();
@@ -75,11 +75,8 @@ namespace BDT.Tests
         public void TearDownTestFixture()
         {
             var database = new BdtContext();
-            var instuctor = database.Instructors.SingleOrDefault(i => i.Name == "Joe");
-            database.Instructors.Remove(instuctor);
-
-            var location = database.Locations.SingleOrDefault(i => i.Name == "Brentwood");
-            database.Locations.Remove(location);
+            database.Instructors.ToList().ForEach(i => database.Instructors.Remove(i));
+            database.Locations.ToList().ForEach(l => database.Locations.Remove(l));
 
             database.SaveChanges();   
         }
@@ -179,7 +176,21 @@ namespace BDT.Tests
             var instructor = new Instructor();
             instructor.Name = "Joe";
             database.Instructors.Add(instructor);
+            database.SaveChanges();
+        }
 
+        [TestFixtureTearDown]
+        public void TearDownTestFixture()
+        {
+            var database = new BdtContext();
+            database.Instructors.ToList().ForEach(i => database.Instructors.Remove(i));
+
+            database.SaveChanges();   
+        }
+        [SetUp]
+        public void Setup()
+        {
+            var database = new BdtContext();
             var location = new Location();
             location.Name = "Brentwood";
             location.Seats = 60;
@@ -188,30 +199,14 @@ namespace BDT.Tests
             database.SaveChanges();
         }
 
-        [TestFixtureTearDown]
-        public void TearDownTestFixture()
-        {
-            var database = new BdtContext();
-            var instuctor = database.Instructors.SingleOrDefault(i => i.Name == "Joe");
-            database.Instructors.Remove(instuctor);
-
-            var location = database.Locations.SingleOrDefault(i => i.Name == "Brentwood");
-            database.Locations.Remove(location);
-
-            database.SaveChanges();
-        }
-
         [TearDown]
         public void TearDown()
         {
             var bdtContext = new BdtContext();
-            var session = bdtContext.Sessions.SingleOrDefault(s => s.Name == "Test Session");
-            if(session != null)
-            {
-                bdtContext.Sessions.Remove(session);
-                bdtContext.SaveChanges();
-            }
+            bdtContext.Locations.ToList().ForEach(l => bdtContext.Locations.Remove(l));
+            bdtContext.SaveChanges();
 
+            bdtContext.Sessions.ToList().ForEach(s => bdtContext.Sessions.Remove(s));
             bdtContext.SessionDates.ToList().ForEach(d => bdtContext.SessionDates.Remove(d));
             bdtContext.SaveChanges();
         }
@@ -224,7 +219,7 @@ namespace BDT.Tests
             var session = new Session
                 {
                     Name = "Test Session",
-                    LocationId = database.Locations.Single().Id
+                    Locations = new List<Location>(database.Locations)
                 };
             session.SessionDates = new List<SessionDate>
                 {
@@ -247,7 +242,7 @@ namespace BDT.Tests
             var session = new Session
             {
                 Name = "Test Session",
-                LocationId = database.Locations.Single().Id
+                Locations = new List<Location>{database.Locations.Single()}
             };
             var addedSession = sessionRepository.Add(session);
             Assert.That(addedSession.Id, Is.GreaterThan(0));

@@ -42,11 +42,8 @@ namespace BDT.Domain.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(),
-                        LocationId = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("Locations", t => t.LocationId, cascadeDelete: true)
-                .Index(t => t.LocationId);
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "Locations",
@@ -68,6 +65,19 @@ namespace BDT.Domain.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
+                "LocationSessions",
+                c => new
+                    {
+                        Location_Id = c.Int(nullable: false),
+                        Session_Id = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => new { t.Location_Id, t.Session_Id })
+                .ForeignKey("Locations", t => t.Location_Id, cascadeDelete: true)
+                .ForeignKey("Sessions", t => t.Session_Id, cascadeDelete: true)
+                .Index(t => t.Location_Id)
+                .Index(t => t.Session_Id);
+            
+            CreateTable(
                 "SessionDateStudents",
                 c => new
                     {
@@ -86,15 +96,18 @@ namespace BDT.Domain.Migrations
         {
             DropIndex("SessionDateStudents", new[] { "Student_Id" });
             DropIndex("SessionDateStudents", new[] { "SessionDate_Id" });
-            DropIndex("Sessions", new[] { "LocationId" });
+            DropIndex("LocationSessions", new[] { "Session_Id" });
+            DropIndex("LocationSessions", new[] { "Location_Id" });
             DropIndex("SessionDates", new[] { "InstructorId" });
             DropIndex("SessionDates", new[] { "SessionId" });
             DropForeignKey("SessionDateStudents", "Student_Id", "Students");
             DropForeignKey("SessionDateStudents", "SessionDate_Id", "SessionDates");
-            DropForeignKey("Sessions", "LocationId", "Locations");
+            DropForeignKey("LocationSessions", "Session_Id", "Sessions");
+            DropForeignKey("LocationSessions", "Location_Id", "Locations");
             DropForeignKey("SessionDates", "InstructorId", "Instructors");
             DropForeignKey("SessionDates", "SessionId", "Sessions");
             DropTable("SessionDateStudents");
+            DropTable("LocationSessions");
             DropTable("Instructors");
             DropTable("Locations");
             DropTable("Sessions");

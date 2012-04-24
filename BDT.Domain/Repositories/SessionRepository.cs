@@ -48,7 +48,10 @@ namespace BDT.Domain.Repositories
         /// <returns></returns>
         public Session Get(int id)
         {
-            return Db.Sessions.Include("SessionDates").Include("SessionDates.Instructor").SingleOrDefault(s => s.Id == id);
+            return Db.Sessions.Include("SessionDates")
+                .Include("SessionDates.Instructor")
+                .Include("Locations")
+                .SingleOrDefault(s => s.Id == id);
         }
 
         /// <summary>
@@ -57,7 +60,7 @@ namespace BDT.Domain.Repositories
         /// <returns>A list of sessions</returns>
         public IEnumerable<Session> GetAllSession()
         {
-            return Db.Sessions.Include("Location");
+            return Db.Sessions.Include("Locations");
         }
 
         public Session Update(Session session)

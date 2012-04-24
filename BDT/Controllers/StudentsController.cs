@@ -23,14 +23,6 @@ namespace BDT.Controllers
         }
 
         //
-        // GET: /Students/Details/5
-
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        //
         // GET: /Students/Create
 
         public ActionResult Create()

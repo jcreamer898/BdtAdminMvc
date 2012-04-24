@@ -8,8 +8,8 @@ namespace BDT.Domain.Entities
     {
         [Required]
         public string Name { get; set; }
-        public int LocationId { get; set; }
-        public virtual Location Location { get; set; }
+
+        public virtual ICollection<Location> Locations { get; set; }
 
         [DisplayName("Session Dates")]
         public virtual ICollection<SessionDate> SessionDates { get; set; }

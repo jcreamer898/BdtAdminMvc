@@ -1,8 +1,21 @@
 ﻿@{
     ViewBag.Title = "About Us";
+    string myString = "brandon's penis is huge...";
 }
 
 <h2>About</h2>
 <p>
      Put content here.
 </p>
+
+@{
+    List<string> listOfStrings = new List<string>();
+    listOfStrings.Add("First thing");
+    listOfStrings.Add("Second thing");
+    listOfStrings.Add("Third thing");
+
+    foreach (var str in listOfStrings)
+    {
+        <p>@str</p>
+    }
+}
