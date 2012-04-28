@@ -61,6 +61,10 @@
     <Compile Include="Migrations\201204240201300_FirstDb.Designer.cs">
       <DependentUpon>201204240201300_FirstDb.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201204260025221_AddedDurationToSessionDate.cs" />
+    <Compile Include="Migrations\201204260025221_AddedDurationToSessionDate.Designer.cs">
+      <DependentUpon>201204260025221_AddedDurationToSessionDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\InstructorRepository.cs" />

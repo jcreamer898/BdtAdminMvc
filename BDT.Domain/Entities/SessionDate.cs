@@ -10,9 +10,12 @@ namespace BDT.Domain.Entities
         public DateTime Date { get; set; }
         public int SessionId { get; set; }
         public int InstructorId { get; set; }
+        public int Duration { get; set; }
 
         public virtual Session Session { get; set; }
         public virtual Instructor Instructor { get; set; }
         public ICollection<Student> Students { get; set; }
+
+        
     }
 }

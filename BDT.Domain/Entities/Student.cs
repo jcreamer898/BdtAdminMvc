@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.ComponentModel;
 using Microsoft.Build.Framework;
 
 namespace BDT.Domain.Entities
@@ -6,9 +7,11 @@ namespace BDT.Domain.Entities
     public class Student : EntityBase
     {
         [Required]
+        [DisplayName("First Name")]
         public string FirstName { get; set; }
 
         [Required]
+        [DisplayName("Last Name")]
         public string LastName { get; set; }
 
         [Required]

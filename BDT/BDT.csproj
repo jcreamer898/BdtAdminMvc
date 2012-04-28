@@ -288,6 +288,15 @@
   <ItemGroup>
     <Content Include="Views\Sessions\_QuickSessions.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Students\List.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Students\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Students\_CreateOrEdit.cshtml" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

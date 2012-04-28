@@ -55,10 +55,7 @@
         </div>
         
         <ul>
-        @foreach(var student in Model)
-        {
-            <li>@student.FirstName @student.LastName</li>
-        }
+            @Html.Partial("List", Model)
         </ul>
     </div>
 </div>
