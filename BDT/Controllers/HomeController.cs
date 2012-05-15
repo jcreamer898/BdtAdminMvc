@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using BDT.Domain;
 using BDT.Models;
+using BDT.Payments;
 
 namespace BDT.Controllers
 {
@@ -20,6 +21,13 @@ namespace BDT.Controllers
         public ActionResult About()
         {
             return View();
+        }
+
+        public ActionResult Pay()
+        {
+            var processor = new Processor();
+            
+            return Content(processor.ProcessOrder());
         }
     }
 }
