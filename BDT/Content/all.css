@@ -1,4 +1,4 @@
-﻿html, body {margin:0px; padding:0px;
+﻿html, body {margin:0px; padding:0px; font-size: 15px !important;
 background: #1e5799;
 background: -moz-linear-gradient(left,  #1e5799 0%, #82daf2 50%, #1e5799 100%);
 background: -webkit-gradient(linear, left top, right top, color-stop(0%,#1e5799), color-stop(50%,#82daf2), color-stop(100%,#1e5799));
@@ -18,7 +18,7 @@ footer {border-top:2px solid #ccc;}
 .row:first-child {margin-top: 50px;}
 .btn {font-weight: bold;}
 a:hover {cursor: pointer;}
-
+td {padding:10px;}
 
 
 /* Navigation Links */

@@ -1,14 +1,17 @@
 using System.Collections.Generic;
 using Microsoft.Build.Framework;
+using System.ComponentModel;
 
 namespace BDT.Domain.Entities
 {
     public class Student : EntityBase
     {
         [Required]
+        [DisplayName("First Name")]
         public string FirstName { get; set; }
 
         [Required]
+        [DisplayName("Last Name")]
         public string LastName { get; set; }
 
         [Required]
