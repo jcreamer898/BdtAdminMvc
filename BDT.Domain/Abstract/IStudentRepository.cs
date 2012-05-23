@@ -7,6 +7,8 @@ namespace BDT.Domain.Abstract
     {
         IEnumerable<Student> GetAllStudents();
         Student SignUp(int id, IEnumerable<SessionDate> sessionDates);
-        Student AddNew(Student student);
+        Student Create(Student student);
+        Student Get(int id);
+        Student Update(Student student);
     }
 }

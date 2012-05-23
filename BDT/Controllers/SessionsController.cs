@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BDT.Domain;
 using BDT.Domain.Abstract;
 using BDT.Domain.Entities;
 using BDT.ViewModels;
@@ -73,7 +75,8 @@ namespace BDT.Controllers
                 .Select(loc => new SelectListItem
                 {
                     Text = loc.Name,
-                    Value = loc.Id.ToString()
+                    Value = loc.Id.ToString(),
+                    Selected = session.Locations.Any(l => l.Id == loc.Id)
                 });
             sessionViewModel.Session = session;
             return View(sessionViewModel);
@@ -83,15 +86,46 @@ namespace BDT.Controllers
         // POST: /Sessions/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(SessionViewModel viewModel)
+        public ActionResult Edit(SessionViewModel viewModel, string[] ids)
         {
-            if(ModelState.IsValid)
+//            if(ModelState.IsValid)
+//            {
+//                _sessionRepository.Update(viewModel.Session);
+//                return RedirectToAction("Index");
+//            }
+            try
             {
-                _sessionRepository.Update(viewModel.Session);
+                var context = new BdtContext();
+                // Retrieve the item
+                var item = _sessionRepository.Get(viewModel.Session.Id);
+                // get the entry, so we can manipulate its state
+                var itemEntry = context.Entry(item);
+                // Make the entity modified
+                itemEntry.State = EntityState.Modified;
+                // Load the existing associated categories
+                itemEntry.Collection(i => i.Locations).Load();
+                // Remove all the existing associated categories
+                item.Locations.Clear();
+
+                // Retrieve the list of ids from the form submission (comes in comma-delimited string)
+                string categories = string.Join(",", ids);
+                // Split to an array
+                var categoryIDs = categories.Split(',');
+                // Iterate through each ID
+                foreach (string locId in categoryIDs)
+                {
+                    int lid = int.Parse(locId);
+                    // Add Items that aren't already present
+                    item.Locations.Add(context.Locations.Find(lid));
+                }
+
+                context.SaveChanges();
                 return RedirectToAction("Index");
             }
-
-            return View(viewModel);
+            catch (Exception)
+            {
+                return View(viewModel);
+            }
         }
 
         //
@@ -140,6 +174,11 @@ namespace BDT.Controllers
         {
             _sessionRepository.DeleteDate(id);
             return RedirectToAction("Edit", new {id = sessionId});
+        }
+
+        public ActionResult QuickSessions()
+        {
+            return PartialView("_QuickSessions");
         }
     }
 }

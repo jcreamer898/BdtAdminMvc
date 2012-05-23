@@ -19,7 +19,7 @@ namespace BDT.Domain.Repositories
         /// <returns>A list of students</returns>
         public IEnumerable<Student> GetAllStudents()
         {
-            return Db.Students.ToList();
+            return Db.Students.Include("SessionDates").ToList();
         }
 
         /// <summary>
@@ -49,11 +49,33 @@ namespace BDT.Domain.Repositories
         /// </summary>
         /// <param name="student">The student to add</param>
         /// <returns>The added student</returns>
-        public Student AddNew(Student student)
+        public Student Create(Student student)
         {
             Db.Students.Add(student);
             Db.SaveChanges();
             return student;
+        }
+
+        /// <summary>
+        /// Update a student
+        /// </summary>
+        /// <param name="student">The student to add</param>
+        /// <returns>The added student</returns>
+        public Student Update(Student student)
+        {
+            Db.Entry(student).State = EntityState.Modified;
+            Db.SaveChanges();
+            return student;
+        }
+
+        /// <summary>
+        /// Get a student by an Id
+        /// </summary>
+        /// <param name="id">The id of the student to retrieve</param>
+        /// <returns>A student</returns>
+        public Student Get(int id)
+        {
+            return Db.Students.SingleOrDefault(st => st.Id == id);
         }
     }
 

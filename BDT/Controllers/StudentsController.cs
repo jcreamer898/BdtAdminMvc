@@ -11,23 +11,17 @@ namespace BDT.Controllers
     public class StudentsController : Controller
     {
         private IStudentRepository _repo;
+        private ISessionRepository _sessionRepo { get; set; }
 
-        public StudentsController(IStudentRepository repo)
+        public StudentsController(IStudentRepository repo, ISessionRepository sessionRepo)
         {
             _repo = repo;
+            _sessionRepo = sessionRepo;
         }
 
         public ActionResult Index()
         {
             return View(_repo.GetAllStudents());
-        }
-
-        //
-        // GET: /Students/Details/5
-
-        public ActionResult Details(int id)
-        {
-            return View();
         }
 
         //
@@ -46,8 +40,7 @@ namespace BDT.Controllers
         {
             if (ModelState.IsValid)
             {
-                _repo.AddNew(student);
-
+                _repo.Create(student);
                 return RedirectToAction("Index");
             }
                 
@@ -60,25 +53,38 @@ namespace BDT.Controllers
  
         public ActionResult Edit(int id)
         {
-            return View();
+            return View(_repo.Get(id));
         }
 
         //
         // POST: /Students/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(Student student)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add update logic here
- 
+                _repo.Update(student);
                 return RedirectToAction("Index");
             }
-            catch
+            return View(student);
+        }
+
+        public ActionResult SignUp(int id)
+        {
+            ViewBag.Sessions = _sessionRepo.GetAllSession();
+            return View(_repo.Get(id));
+        }
+
+        [HttpPost]
+        public ActionResult SignUp(Student student)
+        {
+            if (ModelState.IsValid)
             {
-                return View();
+                _repo.Update(student);
+                return RedirectToAction("Index");
             }
+            return View(student);
         }
 
         //

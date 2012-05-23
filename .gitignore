@@ -11,7 +11,7 @@ obj/
 
 # Ignore leftover merge files
 *~HEAD
-
+Backup/
 # Exceptions
 ![Tt]ools/[Nn]u[Gg]et.exe
 #!Dominion.Cms.6.0.ReSharper.user
@@ -70,3 +70,5 @@ sCRM.Presentation.Web.Deploy.Smoke/Deploy.Smoke
 Zimlets/.idea/*
 
 *.chm
+/_UpgradeReport_Files
+/UpgradeLog.XML
