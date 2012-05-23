@@ -31,8 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LinkPointTransaction">
-      <HintPath>..\packages\LinkPoint\LinkPointTransaction.dll</HintPath>
+    <Reference Include="LinkPointTransaction, Version=1.0.1797.29766, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\LinkPointTransaction.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
