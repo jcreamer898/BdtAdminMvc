@@ -1,0 +1,53 @@
+@model BDT.Domain.Entities.Student
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Student</legend>
+
+    <div class="display-label">FirstName</div>
+    <div class="display-field">@Model.FirstName</div>
+
+    <div class="display-label">LastName</div>
+    <div class="display-field">@Model.LastName</div>
+
+    <div class="display-label">Address</div>
+    <div class="display-field">@Model.Address</div>
+
+    <div class="display-label">City</div>
+    <div class="display-field">@Model.City</div>
+
+    <div class="display-label">Zip</div>
+    <div class="display-field">@Model.Zip</div>
+
+    <div class="display-label">State</div>
+    <div class="display-field">@Model.State</div>
+
+    <div class="display-label">Email</div>
+    <div class="display-field">@Model.Email</div>
+
+    <div class="display-label">Phone</div>
+    <div class="display-field">@Model.Phone</div>
+
+    <div class="display-label">PhoneType</div>
+    <div class="display-field">@Model.PhoneType</div>
+
+    <div class="display-label">Phone2</div>
+    <div class="display-field">@Model.Phone2</div>
+
+    <div class="display-label">PhoneType2</div>
+    <div class="display-field">@Model.PhoneType2</div>
+
+    <div class="display-label">SessionDates</div>
+    <div class="display-field">@(Model.SessionDates == null ? "None" : Model.SessionDates.Count.ToString())</div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+

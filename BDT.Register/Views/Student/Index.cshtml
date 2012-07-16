@@ -1,0 +1,101 @@
+@model IEnumerable<BDT.Domain.Entities.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th></th>
+        <th>
+            FirstName
+        </th>
+        <th>
+            LastName
+        </th>
+        <th>
+            Address
+        </th>
+        <th>
+            City
+        </th>
+        <th>
+            Zip
+        </th>
+        <th>
+            State
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Phone
+        </th>
+        <th>
+            PhoneType
+        </th>
+        <th>
+            Phone2
+        </th>
+        <th>
+            PhoneType2
+        </th>
+        <th>
+            SessionDates
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+        <td>
+			@item.FirstName
+        </td>
+        <td>
+			@item.LastName
+        </td>
+        <td>
+			@item.Address
+        </td>
+        <td>
+			@item.City
+        </td>
+        <td>
+			@item.Zip
+        </td>
+        <td>
+			@item.State
+        </td>
+        <td>
+			@item.Email
+        </td>
+        <td>
+			@item.Phone
+        </td>
+        <td>
+			@item.PhoneType
+        </td>
+        <td>
+			@item.Phone2
+        </td>
+        <td>
+			@item.PhoneType2
+        </td>
+        <td>
+			@(item.SessionDates == null ? "None" : item.SessionDates.Count.ToString())
+        </td>
+    </tr>
+}
+
+</table>
+
+

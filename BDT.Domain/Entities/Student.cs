@@ -30,6 +30,12 @@ namespace BDT.Domain.Entities
         
         public string Email { get; set; }
 
+        public string Phone { get; set; }
+        public string PhoneType { get; set; }
+
+        public string Phone2 { get; set; }
+        public string PhoneType2 { get; set; }
+
         public virtual ICollection<SessionDate> SessionDates { get; set; }
     }
 }

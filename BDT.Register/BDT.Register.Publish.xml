@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="ftp://96.31.35.82/register" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="BDT Register" publishMethod="FTP" replaceMatchingFiles="True" userName="brentwoo" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Content/themes/base/jquery.ui.button.css" publishTime="07/11/2012 21:21:25" />
+    <file relUrl="Content/themes/base/jquery.ui.resizable.css" publishTime="07/11/2012 21:21:25" />
+    <file relUrl="Scripts/jquery-ui-1.8.11.min.js" publishTime="07/11/2012 21:21:24" />
+    <file relUrl="Scripts/MicrosoftAjax.js" publishTime="07/11/2012 21:21:21" />
+    <file relUrl="Scripts/jquery-1.5.1-vsdoc.js" publishTime="07/11/2012 21:21:24" />
+    <file relUrl="Global.asax" publishTime="07/11/2012 21:21:21" />
+    <file relUrl="bin/EntityFramework.xml" publishTime="07/11/2012 21:21:26" />
+    <file relUrl="Views/_ViewStart.cshtml" publishTime="07/11/2012 21:21:21" />
+    <file relUrl="Scripts/modernizr-1.7.js" publishTime="07/11/2012 21:21:27" />
+    <file relUrl="bin/EntityFramework.dll" publishTime="07/11/2012 21:21:26" />
+    <file relUrl="Content/themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png" publishTime="07/11/2012 21:21:26" />
+    <file relUrl="Content/themes/base/jquery.ui.base.css" publishTime="07/11/2012 21:21:25" />
+    <file relUrl="Scripts/jquery.unobtrusive-ajax.min.js" publishTime="07/11/2012 21:21:21" />
+    <file relUrl="Scripts/jquery-1.5.1.js" publishTime="07/11/2012 21:21:23" />
+    <file relUrl="Scripts/MicrosoftMvcAjax.debug.js" publishTime="07/11/2012 21:21:21" />
+    <file relUrl="Scripts/MicrosoftMvcValidation.debug.js" publishTime="07/11/2012 21:21:21" />
+    <file relUrl="Content/themes/base/jquery.ui.all.css" publishTime="07/11/2012 21:21:25" />
+    <file relUrl="bin/BDT.Register.dll" publishTime="07/11/2012 21:23:01" />
+    <file relUrl="Scripts/jquery-ui-1.8.11.js" publishTime="07/11/2012 21:21:25" />
+    <file relUrl="Scripts/jquery.validate.min.js" publishTime="07/11/2012 21:21:24" />
+    <file relUrl="Scripts/jquery.validate-vsdoc.js" publishTime="07/11/2012 21:21:24" />
+    <file relUrl="Content/themes/base/images/ui-icons_222222_256x240.png" publishTime="07/11/2012 21:21:26" />
+    <file relUrl="Content/themes/base/jquery.ui.accordion.css" publishTime="07/11/2012 21:21:25" />
+    <file relUrl="Content/themes/base/images/ui-icons_cd0a0a_256x240.png" publishTime="07/11/2012 21:21:26" />
+    <file relUrl="packages.config" publishTime="07/11/2012 21:21:27" />
+    <file relUrl="Content/themes/base/images/ui-icons_454545_256x240.png" publishTime="07/11/2012 21:21:26" />
+    <file relUrl="Views/Home/Index.cshtml" publishTime="07/11/2012 21:21:50" />
+    <file relUrl="Scripts/jquery-1.5.1.min.js" publishTime="07/11/2012 21:21:23" />
+    <file relUrl="Content/themes/base/jquery.ui.dialog.css" publishTime="07/11/2012 21:21:25" />
+    <file relUrl="Content/themes/base/jquery.ui.progressbar.css" publishTime="07/11/2012 21:21:25" />
+    <file relUrl="Content/themes/base/images/ui-bg_glass_65_ffffff_1x400.png" publishTime="07/11/2012 21:21:26" />
+    <file relUrl="Scripts/MicrosoftMvcAjax.js" publishTime="07/11/2012 21:21:21" />
+    <file relUrl="Scripts/jquery.validate.js" publishTime="07/11/2012 21:21:24" />
+    <file relUrl="Scripts/jquery.validate.unobtrusive.js" publishTime="07/11/2012 21:21:21" />
+    <file relUrl="Views/Shared/Error.cshtml" publishTime="07/11/2012 21:21:21" />
+    <file relUrl="Content/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png" publishTime="07/11/2012 21:21:26" />
+    <file relUrl="Views/Shared/_Layout.cshtml" publishTime="07/11/2012 21:21:21" />
+    <file relUrl="Content/themes/base/jquery.ui.datepicker.css" publishTime="07/11/2012 21:21:25" />
+    <file relUrl="Scripts/MicrosoftMvcValidation.js" publishTime="07/11/2012 21:21:21" />
+    <file relUrl="Content/themes/base/images/ui-bg_glass_75_dadada_1x400.png" publishTime="07/11/2012 21:21:26" />
+    <file relUrl="Content/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png" publishTime="07/11/2012 21:21:26" />
+    <file relUrl="Content/themes/base/jquery.ui.theme.css" publishTime="07/11/2012 21:21:25" />
+    <file relUrl="Content/themes/base/jquery.ui.tabs.css" publishTime="07/11/2012 21:21:25" />
+    <file relUrl="Content/themes/base/jquery.ui.selectable.css" publishTime="07/11/2012 21:21:25" />
+    <file relUrl="Web.config" publishTime="07/11/2012 21:23:06" />
+    <file relUrl="Content/themes/base/images/ui-bg_glass_95_fef1ec_1x400.png" publishTime="07/11/2012 21:21:26" />
+    <file relUrl="Content/themes/base/jquery.ui.autocomplete.css" publishTime="07/11/2012 21:21:25" />
+    <file relUrl="Content/Site.css" publishTime="07/11/2012 21:21:21" />
+    <file relUrl="Content/themes/base/jquery.ui.slider.css" publishTime="07/11/2012 21:21:25" />
+    <file relUrl="Scripts/MicrosoftAjax.debug.js" publishTime="07/11/2012 21:21:21" />
+    <file relUrl="bin/BDT.Register.pdb" publishTime="07/11/2012 21:23:01" />
+    <file relUrl="Scripts/modernizr-1.7.min.js" publishTime="07/11/2012 21:21:27" />
+    <file relUrl="Content/themes/base/images/ui-bg_flat_75_ffffff_40x100.png" publishTime="07/11/2012 21:21:26" />
+    <file relUrl="Scripts/jquery.unobtrusive-ajax.js" publishTime="07/11/2012 21:21:21" />
+    <file relUrl="Content/themes/base/images/ui-icons_888888_256x240.png" publishTime="07/11/2012 21:21:26" />
+    <file relUrl="Scripts/jquery.validate.unobtrusive.min.js" publishTime="07/11/2012 21:21:21" />
+    <file relUrl="Content/themes/base/images/ui-icons_2e83ff_256x240.png" publishTime="07/11/2012 21:21:26" />
+    <file relUrl="Views/Web.config" publishTime="07/11/2012 21:21:21" />
+    <file relUrl="Content/themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png" publishTime="07/11/2012 21:21:26" />
+    <file relUrl="Content/themes/base/jquery.ui.core.css" publishTime="07/11/2012 21:21:25" />
+  </publishProfile>
+</publishData>

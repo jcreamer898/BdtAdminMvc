@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using BDT.Domain;
 using BDT.Models;
-using BDT.Payments;
+using Stripe;
 
 namespace BDT.Controllers
 {
@@ -25,9 +25,28 @@ namespace BDT.Controllers
 
         public ActionResult Pay()
         {
-            var processor = new Processor();
-            
-            return Content(processor.ProcessOrder());
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Pay(string stripeToken)
+        {
+            var myCharge = new StripeChargeCreateOptions();
+
+            // always set these properties
+            myCharge.AmountInCents = 5153;
+            myCharge.Currency = "usd";
+
+            // set this if you want to
+            myCharge.Description = "Charge it like it's hot";
+
+            // set this property if using a token
+            myCharge.TokenId = stripeToken;
+
+            var chargeService = new StripeChargeService();
+            StripeCharge stripeCharge = chargeService.Create(myCharge);
+            return View();
         }
     }
 }

@@ -1,0 +1,64 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Pay";
+}
+
+<h2>Pay</h2>
+
+<script type="text/javascript" src="https://js.stripe.com/v1/"></script>
+
+<script type="text/javascript">
+     // this identifies your website in the createToken call below
+    Stripe.setPublishableKey('pk_tNDL06weyEgan3G6Qzwa2IoaT5qaS');
+    $(document).ready(function () {
+        $("#payment-form").submit(function (event) {
+            // disable the submit button to prevent repeated clicks
+            $('.submit-button').attr("disabled", "disabled");
+
+            Stripe.createToken({
+                number: $('.card-number').val(),
+                cvc: $('.card-cvc').val(),
+                exp_month: $('.card-expiry-month').val(),
+                exp_year: $('.card-expiry-year').val()
+            }, stripeResponseHandler);
+
+            // prevent the form from submitting with the default action
+            return false;
+        });
+    });
+    
+    function stripeResponseHandler(status, response) {
+     if (response.error) {
+             // show the errors on the form
+             $(".payment-errors").text(response.error.message);
+             $(".submit-button").removeAttr("disabled");
+         } else {
+             var form$ = $("#payment-form");
+             // token contains id, last4, and card type
+             var token = response['id'];
+             // insert the token into the form so it gets submitted to the server
+             form$.append("<input type='hidden' name='stripeToken' value='" + token + "'/>");
+             // and submit
+             form$.get(0).submit();
+         }
+     }
+ </script>
+
+<form action="" method="POST" id="payment-form">
+   <div class="form-row">
+     <label>Card Number</label>
+     <input type="text" size="20" autocomplete="off" class="card-number" value="4242424242424242"/>
+   </div>
+   <div class="form-row">
+     <label>CVC</label>
+     <input type="text" size="4" autocomplete="off" class="card-cvc" value="111"/>
+   </div>
+   <div class="form-row">
+     <label>Expiration (MM/YYYY)</label>
+     <input type="text" size="2" class="card-expiry-month" value="11"/>
+     <span> / </span>
+     <input type="text" size="4" class="card-expiry-year" value="2012"/>
+   </div>
+   <button type="submit" class="submit-button">Submit Payment</button>
+ </form>

@@ -14,7 +14,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDT.Tests", "BDT.Tests\BDT.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDT.Domain", "BDT.Domain\BDT.Domain.csproj", "{2FA3C793-47A9-4C24-8B65-8F4A372005E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDT.Payments", "BDT.Payments\BDT.Payments.csproj", "{CC7D8C64-7795-4984-B0EE-45E45C123FA8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDT.Register", "BDT.Register\BDT.Register.csproj", "{23079B55-741F-4A00-90DE-1E29265D09A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,10 +34,10 @@ Global
 		{2FA3C793-47A9-4C24-8B65-8F4A372005E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FA3C793-47A9-4C24-8B65-8F4A372005E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FA3C793-47A9-4C24-8B65-8F4A372005E3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CC7D8C64-7795-4984-B0EE-45E45C123FA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CC7D8C64-7795-4984-B0EE-45E45C123FA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CC7D8C64-7795-4984-B0EE-45E45C123FA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CC7D8C64-7795-4984-B0EE-45E45C123FA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23079B55-741F-4A00-90DE-1E29265D09A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23079B55-741F-4A00-90DE-1E29265D09A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23079B55-741F-4A00-90DE-1E29265D09A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23079B55-741F-4A00-90DE-1E29265D09A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
