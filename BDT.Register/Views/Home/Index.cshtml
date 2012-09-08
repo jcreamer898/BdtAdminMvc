@@ -7,8 +7,17 @@
 <h2>Home</h2>
 
 <ul>
-@foreach(var student in Model)
-{
-    <li>@student.FirstName</li>
-}
+    @foreach(var student in Model)
+    {
+        <li>@student.FirstName</li>
+        <li><a href="@Url.Action("SignUp", new { id = student.Id })">SignUp</a></li>
+    }
 </ul>
+
+<div class="sign-up-wrapper">
+    <form method="post">
+        <input type="text" name="email" placeholder="Email Address" />
+        <input type="text" name="zip" placeholder="zip" />
+        <input type="submit" name="submit" value="Search" />
+    </form>
+</div>

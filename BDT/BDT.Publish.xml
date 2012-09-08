@@ -1,14 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <publishData>
-  <publishProfile publishUrl="ftp://control.brentwooddrivertraining.com/control" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite=" brentwooddrivertraining.com/control" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="True" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="BDT" publishMethod="FTP" replaceMatchingFiles="True" userName="brentwoo" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzpDhrkjFs0iCFJoRqelAQQAAAAACAAAAAAAQZgAAAAEAACAAAADTjCnE79hIaN3UZxS6PKkj//kYf8YgwziOAXasFohBpAAAAAAOgAAAAAIAACAAAADDfGVWMh00A4TF+7RubIeuKVm6BrdqeM19bjFxgt3srzAAAABC+wUzERcQRBHGM+iL1LO9FJekUEctVkKUAIQqBDZcb3bNQggi1pjRY0rI9E/h76NAAAAApQXcbRSL0KdKnXuLSHr8Hr67foDDTjYe2QVeMxzHQJK3wpxoi6fNhZUeiuYXStan31cEHZcQFRUKrqCPaW0jHQ==" SelectedForPublish="True">
-    <file relUrl="Content/themes/base/minified/jquery.ui.slider.min.css" publishTime="04/21/2012 19:17:15" />
+  <publishProfile publishUrl="https://w08.winhost.com:8172/MsDeploy.axd" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="brentwooddrivertraining.com/control" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="True" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="True" profileName="BDT" publishMethod="MSDeploy" replaceMatchingFiles="True" userName="brentwoo" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzpDhrkjFs0iCFJoRqelAQQAAAAACAAAAAAAQZgAAAAEAACAAAADTjCnE79hIaN3UZxS6PKkj//kYf8YgwziOAXasFohBpAAAAAAOgAAAAAIAACAAAADDfGVWMh00A4TF+7RubIeuKVm6BrdqeM19bjFxgt3srzAAAABC+wUzERcQRBHGM+iL1LO9FJekUEctVkKUAIQqBDZcb3bNQggi1pjRY0rI9E/h76NAAAAApQXcbRSL0KdKnXuLSHr8Hr67foDDTjYe2QVeMxzHQJK3wpxoi6fNhZUeiuYXStan31cEHZcQFRUKrqCPaW0jHQ==" SelectedForPublish="True">
+    <file relUrl="Views/Students/_CreateOrEdit.cshtml" publishTime="04/25/2012 21:03:04" />
     <file relUrl="Content/bootstrap.css" publishTime="04/21/2012 19:57:27" />
     <file relUrl="bin/System.Web.WebPages.dll" publishTime="01/05/2011 15:45:38" />
     <file relUrl="Scripts/libs/jquery-ui-1.8.19.min.js" publishTime="04/21/2012 19:17:12" />
     <file relUrl="Content/themes/base/jquery.ui.datepicker.css" publishTime="04/21/2012 19:17:16" />
-    <file relUrl="Views/Students/Index.cshtml" publishTime="04/25/2012 19:36:14" />
+    <file relUrl="Views/Students/List.cshtml" publishTime="04/25/2012 19:37:28" />
     <file relUrl="Content/themes/base/minified/jquery.ui.core.min.css" publishTime="04/21/2012 19:17:15" />
     <file relUrl="bin/System.Web.Helpers.xml" publishTime="12/19/2010 23:59:38" />
+    <file relUrl="Scripts/libs/jquery.validate.unobtrusive.js" publishTime="04/21/2012 17:19:09" />
     <file relUrl="Views/Students/Edit.cshtml" publishTime="04/26/2012 20:01:51" />
     <file relUrl="Scripts/libs/jquery-1.7.2.js" publishTime="04/21/2012 19:17:17" />
     <file relUrl="Content/themes/base/minified/jquery-ui.min.css" publishTime="04/21/2012 19:17:14" />
@@ -27,22 +28,21 @@
     <file relUrl="bin/Ninject.Web.Common.dll" publishTime="04/21/2012 19:39:57" />
     <file relUrl="Scripts/libs/jquery.validate.js" publishTime="04/21/2012 19:17:17" />
     <file relUrl="bin/System.Web.Razor.xml" publishTime="12/08/2010 15:10:40" />
-    <file relUrl="Views/Sessions/Index.cshtml" publishTime="04/25/2012 15:59:43" />
     <file relUrl="Content/themes/base/jquery.ui.all.css" publishTime="04/21/2012 19:17:16" />
+    <file relUrl="Content/chosen.css" publishTime="04/25/2012 15:59:43" />
     <file relUrl="bin/System.Web.WebPages.Administration.dll" publishTime="01/05/2011 15:45:38" />
     <file relUrl="bin/System.Web.Razor.dll" publishTime="01/05/2011 15:45:38" />
     <file relUrl="bin/Ninject.Web.Mvc.xml" publishTime="04/21/2012 19:39:57" />
     <file relUrl="Views/Home/Index.cshtml" publishTime="04/22/2012 12:49:42" />
     <file relUrl="bin/NuGet.Core.dll" publishTime="12/20/2010 13:37:28" />
-    <file relUrl="Views/Sessions/_CreateOrEdit.cshtml" publishTime="04/25/2012 15:59:43" />
     <file relUrl="Views/Shared/Error.cshtml" publishTime="04/21/2012 17:19:09" />
     <file relUrl="Content/themes/base/minified/jquery.ui.progressbar.min.css" publishTime="04/21/2012 19:17:15" />
     <file relUrl="Scripts/libs/jquery-1.7.2.min.js" publishTime="04/21/2012 19:17:17" />
     <file relUrl="Views/Locations/Create.cshtml" publishTime="04/22/2012 18:14:32" />
     <file relUrl="Views/Instructor/Edit.cshtml" publishTime="04/22/2012 18:47:39" />
-    <file relUrl="Views/Shared/_LogOnPartial.cshtml" publishTime="04/21/2012 17:19:09" />
+    <file relUrl="Content/chosen-sprite.png" publishTime="04/25/2012 15:59:43" />
     <file relUrl="Views/Sessions/Create.cshtml" publishTime="04/22/2012 19:23:29" />
-    <file relUrl="Scripts/libs/modernizr-1.7.min.js" publishTime="04/21/2012 17:19:18" />
+    <file relUrl="Views/Shared/_LogOnPartial.cshtml" publishTime="04/21/2012 17:19:09" />
     <file relUrl="bin/BDT.Domain.dll" publishTime="07/11/2012 22:02:27" />
     <file relUrl="bin/Ninject.pdb" publishTime="04/21/2012 19:39:39" />
     <file relUrl="Views/Instructor/_CreateOrEdit.cshtml" publishTime="04/22/2012 18:45:52" />
@@ -54,17 +54,18 @@
     <file relUrl="Content/themes/base/jquery.ui.tabs.css" publishTime="04/21/2012 19:17:15" />
     <file relUrl="Views/Locations/Edit.cshtml" publishTime="04/22/2012 18:24:40" />
     <file relUrl="bin/System.Web.WebPages.xml" publishTime="12/19/2010 23:59:38" />
-    <file relUrl="Views/Students/_CreateOrEdit.cshtml" publishTime="04/25/2012 21:03:04" />
     <file relUrl="bin/Ninject.Web.Common.xml" publishTime="04/21/2012 19:39:57" />
+    <file relUrl="Content/themes/base/minified/jquery.ui.slider.min.css" publishTime="04/21/2012 19:17:15" />
     <file relUrl="Views/Sessions/_QuickSessions.cshtml" publishTime="04/25/2012 15:59:43" />
     <file relUrl="Content/themes/base/images/ui-icons_2e83ff_256x240.png" publishTime="04/21/2012 19:17:16" />
     <file relUrl="Content/themes/base/minified/jquery.ui.tabs.min.css" publishTime="04/21/2012 19:17:14" />
     <file relUrl="bin/System.Web.WebPages.Deployment.dll" publishTime="01/05/2011 15:45:38" />
     <file relUrl="bin/BDT.pdb" publishTime="07/11/2012 22:31:20" />
     <file relUrl="bin/Ninject.Web.Common.pdb" publishTime="04/21/2012 19:39:57" />
+    <file relUrl="Content/themes/base/minified/images/ui-icons_2e83ff_256x240.png" publishTime="04/21/2012 19:17:15" />
     <file relUrl="Content/themes/base/jquery.ui.accordion.css" publishTime="04/21/2012 19:17:16" />
     <file relUrl="Global.asax" publishTime="04/21/2012 17:19:09" />
-    <file relUrl="bin/System.Web.WebPages.Deployment.xml" publishTime="12/08/2010 15:10:40" />
+    <file relUrl="Views/Sessions/_CreateOrEdit.cshtml" publishTime="04/25/2012 15:59:43" />
     <file relUrl="Views/Shared/_Navigation.cshtml" publishTime="04/22/2012 19:14:08" />
     <file relUrl="Content/bootstrap.min.css" publishTime="04/21/2012 18:38:53" />
     <file relUrl="Views/Locations/Delete.cshtml" publishTime="04/22/2012 18:28:55" />
@@ -74,7 +75,8 @@
     <file relUrl="Content/themes/base/minified/images/ui-bg_glass_65_ffffff_1x400.png" publishTime="04/21/2012 19:17:15" />
     <file relUrl="packages.config" publishTime="07/11/2012 18:07:07" />
     <file relUrl="Content/themes/base/jquery.ui.dialog.css" publishTime="04/21/2012 19:17:16" />
-    <file relUrl="Content/themes/base/minified/images/ui-icons_2e83ff_256x240.png" publishTime="04/21/2012 19:17:15" />
+    <file relUrl="Views/Shared/_Footer.cshtml" publishTime="04/22/2012 19:14:36" />
+    <file relUrl="Scripts/libs/modernizr-1.7.min.js" publishTime="04/21/2012 17:19:18" />
     <file relUrl="bin/WebMatrix.Data.dll" publishTime="01/05/2011 15:45:38" />
     <file relUrl="Content/themes/base/minified/images/ui-bg_glass_55_fbf9ee_1x400.png" publishTime="04/21/2012 19:17:15" />
     <file relUrl="Content/themes/base/images/ui-icons_222222_256x240.png" publishTime="04/21/2012 19:17:16" />
@@ -90,7 +92,7 @@
     <file relUrl="Scripts/dates.js" publishTime="04/22/2012 20:19:54" />
     <file relUrl="bin/BDT.Domain.pdb" publishTime="07/11/2012 22:02:27" />
     <file relUrl="Content/themes/base/minified/jquery.ui.theme.min.css" publishTime="04/21/2012 19:17:14" />
-    <file relUrl="Views/Students/List.cshtml" publishTime="04/25/2012 19:37:28" />
+    <file relUrl="Views/Students/Index.cshtml" publishTime="04/25/2012 19:36:14" />
     <file relUrl="Views/Home/About.cshtml" publishTime="04/25/2012 15:59:43" />
     <file relUrl="Content/themes/base/jquery.ui.resizable.css" publishTime="04/21/2012 19:17:16" />
     <file relUrl="Content/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png" publishTime="04/21/2012 19:17:16" />
@@ -130,7 +132,6 @@
     <file relUrl="Content/themes/base/minified/jquery.ui.resizable.min.css" publishTime="04/21/2012 19:17:15" />
     <file relUrl="bin/WebActivator.dll" publishTime="04/21/2012 19:39:57" />
     <file relUrl="Content/bootstrap-responsive.css" publishTime="04/21/2012 18:38:53" />
-    <file relUrl="Views/Shared/_Footer.cshtml" publishTime="04/22/2012 19:14:36" />
     <file relUrl="Content/themes/base/images/ui-bg_flat_75_ffffff_40x100.png" publishTime="04/21/2012 19:17:16" />
     <file relUrl="Views/Locations/_CreateOrEdit.cshtml" publishTime="04/22/2012 18:15:02" />
     <file relUrl="bin/BDT.dll" publishTime="07/11/2012 22:31:20" />
@@ -148,14 +149,13 @@
     <file relUrl="Content/themes/base/images/ui-icons_888888_256x240.png" publishTime="04/21/2012 19:17:16" />
     <file relUrl="Content/themes/base/jquery.ui.progressbar.css" publishTime="04/21/2012 19:17:16" />
     <file relUrl="Content/themes/base/minified/jquery.ui.selectable.min.css" publishTime="04/21/2012 19:17:15" />
-    <file relUrl="Content/chosen-sprite.png" publishTime="04/25/2012 15:59:43" />
+    <file relUrl="Views/Sessions/Index.cshtml" publishTime="04/25/2012 15:59:43" />
     <file relUrl="Scripts/libs/jquery-ui-1.8.19.js" publishTime="04/21/2012 19:17:12" />
     <file relUrl="Scripts/libs/bootstrap.min.js" publishTime="04/21/2012 18:38:53" />
-    <file relUrl="Views/Account/Register.cshtml" publishTime="04/21/2012 17:19:09" />
     <file relUrl="bin/System.Web.Helpers.dll" publishTime="01/05/2011 15:45:38" />
     <file relUrl="Content/themes/base/minified/images/ui-bg_flat_0_aaaaaa_40x100.png" publishTime="04/21/2012 19:17:15" />
     <file relUrl="Views/Students/SignUp.cshtml" publishTime="05/07/2012 18:14:57" />
-    <file relUrl="Scripts/libs/jquery.validate.unobtrusive.js" publishTime="04/21/2012 17:19:09" />
+    <file relUrl="Views/Account/Register.cshtml" publishTime="04/21/2012 17:19:09" />
     <file relUrl="bin/WebMatrix.Data.xml" publishTime="12/19/2010 23:59:38" />
     <file relUrl="Content/themes/base/minified/jquery.ui.button.min.css" publishTime="04/21/2012 19:17:15" />
     <file relUrl="Views/Account/LogOn.cshtml" publishTime="04/21/2012 17:19:09" />
@@ -163,6 +163,6 @@
     <file relUrl="Content/themes/base/minified/jquery.ui.datepicker.min.css" publishTime="04/21/2012 19:17:15" />
     <file relUrl="Scripts/libs/jquery.validate-vsdoc.js" publishTime="04/21/2012 19:17:17" />
     <file relUrl="Content/themes/base/minified/images/ui-bg_highlight-soft_75_cccccc_1x100.png" publishTime="04/21/2012 19:17:15" />
-    <file relUrl="Content/chosen.css" publishTime="04/25/2012 15:59:43" />
+    <file relUrl="bin/System.Web.WebPages.Deployment.xml" publishTime="12/08/2010 15:10:40" />
   </publishProfile>
 </publishData>

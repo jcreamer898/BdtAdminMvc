@@ -19,7 +19,7 @@ namespace BDT.Domain.Repositories
         /// <returns>A list of students</returns>
         public IEnumerable<Student> GetAllStudents()
         {
-            return Db.Students.Include("SessionDates").ToList();
+            return Db.Students.ToList();
         }
 
         /// <summary>
@@ -28,17 +28,47 @@ namespace BDT.Domain.Repositories
         /// <param name="id">The Id of the student to add classes</param>
         /// <param name="sessionDates">The dates to sign up the student</param>
         /// <returns>The registered student.</returns>
-        public Student SignUp(int id, IEnumerable<SessionDate> sessionDates)
+        public Student SignUp(int id, int sessionId)
         {
-            var student = Db.Students.SingleOrDefault(s => s.Id == id);
-            if (sessionDates != null)
+            var student = Db.Students.Include("Sessions").SingleOrDefault(s => s.Id == id);
+
+            if (student == null)
             {
-                // Attach the dates to the current context to ensure no new sessions
-                // get added by accident.
-                var list = sessionDates.ToList();
-                list.ForEach(s => Db.SessionDates.Attach(s));
-                student.SessionDates = sessionDates.ToList();
+                throw new Exception("No student found.");
             }
+
+            if (student.Sessions.Any(s => s.Id == sessionId))
+            {
+                throw new Exception("Student is already registered for this date.");
+            }
+
+            var session = Db.Sessions.Include("Students").SingleOrDefault(s => s.Id == sessionId);
+            
+            if (session == null)
+            {
+                throw new Exception("No session found.");
+            }
+
+            var limit = session.Seats;
+            
+            if (session.Students.Count + 1 > limit)
+            {
+                throw new Exception("Session is full.");
+            }
+
+
+            // Attach the dates to the current context to ensure no new sessions
+            // get added by accident.
+//            var list = sessionDates.ToList();
+//            if (!DateAvailable(sessionDates, session))
+//            {
+//                throw new Exception("This Session is already full.");
+//            }
+//            list.ForEach(s => Db.SessionDates.Attach(s));
+//            student.SessionDates = sessionDates.ToList();
+
+            student.Sessions.Add(session);
+            
             Db.Entry(student).State = EntityState.Modified;
             Db.SaveChanges();
             return student;

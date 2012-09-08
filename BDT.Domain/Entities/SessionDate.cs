@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using Microsoft.Build.Framework;
 
 namespace BDT.Domain.Entities
@@ -8,14 +9,12 @@ namespace BDT.Domain.Entities
     {
         [Required]
         public DateTime Date { get; set; }
-        public int SessionId { get; set; }
-        public int InstructorId { get; set; }
+
+        [DefaultValue(8)]
         public int Duration { get; set; }
 
-        public virtual Session Session { get; set; }
-        public virtual Instructor Instructor { get; set; }
-        public ICollection<Student> Students { get; set; }
-
+        public int SessionId { get; set; }
         
+        public virtual Session Session { get; set; }
     }
 }

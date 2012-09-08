@@ -19,9 +19,8 @@ namespace BDT.Register.Controllers
 
         public ViewResult Index()
         {
-            return View(context.Students.Include(student => student.SessionDates).ToList());
+            return View(context.Students.ToList());
         }
-
         //
         // GET: /Student/Details/5
 

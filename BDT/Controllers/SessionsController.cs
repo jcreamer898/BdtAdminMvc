@@ -38,14 +38,14 @@ namespace BDT.Controllers
         public ActionResult Create()
         {
             var sessionViewModel = new SessionViewModel();
+            sessionViewModel.Session = new Session();
             sessionViewModel.Locations = _locationRepository.GetAllLocations()
-                .Select(l => new SelectListItem
+                .Select(loc => new SelectListItem
                 {
-                    Text = l.Name,
-                    Value = l.Id.ToString()
+                    Text = loc.Name,
+                    Value = loc.Id.ToString()
                 });
 
-            sessionViewModel.Session = new Session();
             return View(sessionViewModel);
         } 
 
@@ -76,7 +76,7 @@ namespace BDT.Controllers
                 {
                     Text = loc.Name,
                     Value = loc.Id.ToString(),
-                    Selected = session.Locations.Any(l => l.Id == loc.Id)
+                    Selected = session.LocationId == loc.Id
                 });
             sessionViewModel.Session = session;
             return View(sessionViewModel);
@@ -95,31 +95,31 @@ namespace BDT.Controllers
 //            }
             try
             {
-                var context = new BdtContext();
+//                var context = new BdtContext();
                 // Retrieve the item
-                var item = _sessionRepository.Get(viewModel.Session.Id);
+                _sessionRepository.Update(viewModel.Session);
                 // get the entry, so we can manipulate its state
-                var itemEntry = context.Entry(item);
+//                var itemEntry = context.Entry(item);
                 // Make the entity modified
-                itemEntry.State = EntityState.Modified;
-                // Load the existing associated categories
-                itemEntry.Collection(i => i.Locations).Load();
-                // Remove all the existing associated categories
-                item.Locations.Clear();
+//                itemEntry.State = EntityState.Modified;
+//                // Load the existing associated categories
+//                itemEntry.Collection(i => i.Locations).Load();
+//                // Remove all the existing associated categories
+//                item.Locations.Clear();
+//
+//                // Retrieve the list of ids from the form submission (comes in comma-delimited string)
+//                string categories = string.Join(",", ids);
+//                // Split to an array
+//                var categoryIDs = categories.Split(',');
+//                // Iterate through each ID
+//                foreach (string locId in categoryIDs)
+//                {
+//                    int lid = int.Parse(locId);
+//                    // Add Items that aren't already present
+//                    item.Locations.Add(context.Locations.Find(lid));
+//                }
 
-                // Retrieve the list of ids from the form submission (comes in comma-delimited string)
-                string categories = string.Join(",", ids);
-                // Split to an array
-                var categoryIDs = categories.Split(',');
-                // Iterate through each ID
-                foreach (string locId in categoryIDs)
-                {
-                    int lid = int.Parse(locId);
-                    // Add Items that aren't already present
-                    item.Locations.Add(context.Locations.Find(lid));
-                }
-
-                context.SaveChanges();
+//                context.SaveChanges();
                 return RedirectToAction("Index");
             }
             catch (Exception)
@@ -150,12 +150,6 @@ namespace BDT.Controllers
         
         public ActionResult Dates(int id)
         {
-            ViewBag.InstructorId = _instructorRepostiory.GetAllInstructors()
-                .Select(inst => new SelectListItem
-                    {
-                        Text = inst.Name,
-                        Value = inst.Id.ToString()
-                    });
             return View(new SessionDate{ Date = DateTime.Now, SessionId = id});
         }
         

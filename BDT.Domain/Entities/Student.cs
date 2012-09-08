@@ -36,6 +36,6 @@ namespace BDT.Domain.Entities
         public string Phone2 { get; set; }
         public string PhoneType2 { get; set; }
 
-        public virtual ICollection<SessionDate> SessionDates { get; set; }
+        public virtual ICollection<Session> Sessions { get; set; }
     }
 }

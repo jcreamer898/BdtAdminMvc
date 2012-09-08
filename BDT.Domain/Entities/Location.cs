@@ -4,8 +4,8 @@ namespace BDT.Domain.Entities
 {
     public class Location : EntityBase
     {
-        public int Seats { get; set; }
         public string Name { get; set; }
+        public int Seats { get; set; }
 
         public virtual ICollection<Session> Session { get; set; }
     }
@@ -13,5 +13,7 @@ namespace BDT.Domain.Entities
     public class Instructor : EntityBase
     {
         public string Name { get; set; }
+
+        public IEnumerable<Session> Sessions { get; set; }
     }
 }

@@ -6,7 +6,7 @@ namespace BDT.Domain.Abstract
     public interface IStudentRepository
     {
         IEnumerable<Student> GetAllStudents();
-        Student SignUp(int id, IEnumerable<SessionDate> sessionDates);
+        Student SignUp(int id, int sessionId);
         Student Create(Student student);
         Student Get(int id);
         Student Update(Student student);

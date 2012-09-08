@@ -31,9 +31,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.Name)
         </td>
-        <td>
+@*        <td>
             @Html.DropDownListFor(modelItem => item.Locations, item.Locations.Select(loc => new SelectListItem{ Text = loc.Name }))
-        </td>
+        </td>*@
         <td>
             @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
             @Html.ActionLink("Delete", "Delete", new { id = item.Id })

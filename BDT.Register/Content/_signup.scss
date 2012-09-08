@@ -1,0 +1,11 @@
+﻿@import "includes";
+
+.sign-up-wrapper{
+    input[type="text"] {
+        width: 400px;
+        height: 25px;
+        font-size: 16px;
+        @include rounded(5px);
+        border: 1px solid silver;
+    }
+}

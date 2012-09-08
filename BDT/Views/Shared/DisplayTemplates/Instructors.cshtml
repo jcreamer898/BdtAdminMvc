@@ -1,0 +1,19 @@
+﻿@using BDT.Domain.Entities
+@model IEnumerable<BDT.Domain.Entities.Instructor>
+
+@{
+    if (Model != null)
+    {
+        
+        <ul id="sessionDates">
+            
+            @foreach (Instructor instructor in Model)
+            {
+                <li>
+                    @instructor.Name
+                    <a href="@Url.Action("Edit", "Instructor", new {id = instructor.Id })">X</a>
+                </li>
+            }
+        </ul>
+    }
+}

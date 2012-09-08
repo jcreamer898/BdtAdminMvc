@@ -1,0 +1,43 @@
+﻿@model BDT.Domain.Entities.Student
+
+@{
+    ViewBag.Title = "Sign Up Student";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <div class="editor-field">
+        @Html.DropDownList("SessionId")
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("LocationId")
+    </div>
+
+    @Html.HiddenFor(m => m.Id)
+    @Html.HiddenFor(m => m.FirstName)
+    @Html.HiddenFor(m => m.LastName)
+    @Html.HiddenFor(m => m.Email)
+    @Html.HiddenFor(m => m.Address)
+    @Html.HiddenFor(m => m.City)
+    @Html.HiddenFor(m => m.State)
+    @Html.HiddenFor(m => m.Zip)
+    @Html.HiddenFor(m => m.Phone)
+    @Html.HiddenFor(m => m.PhoneType)
+    @Html.HiddenFor(m => m.Phone2)
+    @Html.HiddenFor(m => m.PhoneType2)
+
+    <input type="submit" value="Register" />
+}
+
+
+<form action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/649550292714623" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm" target="_top">
+	<input name="item_name_1" type="hidden" value="Teen Classroom Course"/>
+	<input name="item_description_1" type="hidden" value=""/>
+	<input name="item_quantity_1" type="hidden" value="1"/>
+	<input name="item_price_1" type="hidden" value="395.0"/>
+	<input name="item_currency_1" type="hidden" value="USD"/>
+	<input name="_charset_" type="hidden" value="utf-8"/>
+	<input alt="" src="https://checkout.google.com/buttons/buy.gif?merchant_id=649550292714623&amp;w=117&amp;h=48&amp;style=white&amp;variant=text&amp;loc=en_US" type="image"/>
+</form>

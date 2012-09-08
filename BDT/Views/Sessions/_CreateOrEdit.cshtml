@@ -11,18 +11,24 @@
 </div>
 
 <div class="editor-label">
-    @Html.LabelFor(model => model.Session.Locations)
+    @Html.LabelFor(model => model.Session.Seats)
 </div>
 <div class="editor-field">
-    @{
-        List<int> ids = Model.Session.Locations.Select(loc => loc.Id ).ToList();
-    }
-    @Html.ListBoxFor(model => ids,
-                         Model.Locations, 
-                         new { @multiple = "multiple", @class="chosen"})
-    @Html.ValidationMessageFor(model => model.Session.Locations)
+    @Html.EditorFor(model => model.Session.Seats)
+    @Html.ValidationMessageFor(model => model.Session.Seats)
 </div>
 
+<div class="editor-label">
+    @Html.LabelFor(model => model.Session.Seats)
+</div>
+<div class="editor-field">
+    @Html.DropDownListFor(model => model.Session.LocationId, new SelectList(Model.Locations, "Value", "Text"))
+    @Html.ValidationMessageFor(model => model.Session.Seats)
+</div>
+
+<a class="btn btn-success" id="addSession" href="@Url.Action("Dates", "Sessions", new {id = Model.Session.Id})">
+    <i class="icon-plus icon-white"></i> Add Dates
+</a>
 
 @{
     if (Model.Session.SessionDates != null)
@@ -31,10 +37,19 @@
             @Html.LabelFor(model => model.Session.SessionDates)
         </div>
         <div class="editor-field">
-            <a class="btn btn-success" id="addSession" href="@Url.Action("Dates", "Sessions", new {id = Model.Session.Id})">
-                <i class="icon-plus icon-white"></i> Add Dates
-            </a>
             @Html.DisplayFor(model => model.Session.SessionDates, "SessionDates")        
+        </div>
+    }
+}
+
+@{
+    if (Model.Session.Instructors != null)
+    {
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Session.Instructors)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.Session.Instructors, "SessionDates")        
         </div>
     }
 }

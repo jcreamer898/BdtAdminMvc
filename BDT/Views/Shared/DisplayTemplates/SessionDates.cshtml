@@ -4,13 +4,14 @@
 @{
     if (Model != null)
     {
-        IOrderedEnumerable<SessionDate> sessionDates = Model.OrderBy(prop => prop.Date);
+        IEnumerable<SessionDate> sessionDates = Model.OrderBy(prop => prop.Date).ToList();
+        
         <ul id="sessionDates">
+            
             @foreach (SessionDate date in sessionDates)
             {
                 <li>
                     @date.Date.ToShortDateString()
-                    @date.Instructor.Name
                     <a href="@Url.Action("DeleteDate", "Sessions", new {id = date.Id, sessionId = date.SessionId})">X</a>
                 </li>
             }
